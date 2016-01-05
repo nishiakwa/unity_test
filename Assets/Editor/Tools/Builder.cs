@@ -12,11 +12,12 @@ public class Builder {
 		foreach( EditorBuildSettingsScene scene in EditorBuildSettings.scenes ){
 			allScene[i] = scene.path;
 			i++;
-		}	
+		}
+		PlayerSettings.productName = "Jenkins Test App";
 		PlayerSettings.bundleIdentifier = "jp.co.hoge.hoge";
 		PlayerSettings.statusBarHidden = true;
 		BuildPipeline.BuildPlayer( allScene,
-		                          "hoge.apk",
+		                          "out.apk",
 		                          BuildTarget.Android,
 		                          BuildOptions.None
 		                          );
